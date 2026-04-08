@@ -74,10 +74,9 @@ app.listen(port, () => {
   console.log(`Server running on port ${port} 🚀`);
 });
 
-// npm init - y
-// npm install express@latest
-// node --watch server.js
-// npm i dotenv
-// npm install mongodb
-// npm i body-parser
-// npm i cores to allow cross origin requests
+
+
+
+
+
+

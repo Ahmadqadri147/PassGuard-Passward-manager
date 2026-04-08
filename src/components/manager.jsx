@@ -28,10 +28,10 @@ const manager = () => {
       return;
     }
 
-    // Agar id hai → Update mode
+
     if (form.id) {
       const res = await fetch(`http://localhost:3000/${form.id}`, {
-        method: "PUT",       // ← PUT for edit
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           site: form.site,
@@ -43,7 +43,7 @@ const manager = () => {
       if (data.success) toast.success("Password updated");
       else toast.error("Update failed");
     }
-    // Naya save
+
     else {
       const res = await fetch("http://localhost:3000/", {
         method: "POST",
@@ -55,9 +55,9 @@ const manager = () => {
       else toast.error("Save failed");
     }
 
-    // Form reset
+
     setform({ site: "", user: "", pass: "", id: "" });
-    getpasswards(); // reload list
+    getpasswards();
   };
 
 
@@ -73,7 +73,7 @@ const manager = () => {
       method: "DELETE"
     });
 
-    // localStorage.setItem("passwards", JSON.stringify(updatedArray));
+
 
     toast('Passward deleted successfully!', {
       position: "top-right",
@@ -98,7 +98,7 @@ const manager = () => {
       site: itemToEdit.site,
       user: itemToEdit.user,
       pass: itemToEdit.pass,
-      id: itemToEdit._id   // ← important for update
+      id: itemToEdit._id
     });
   };
 

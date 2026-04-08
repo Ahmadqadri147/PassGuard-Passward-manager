@@ -3,8 +3,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Manager from './components/manager'
 import Footer from './components/Footer'
-// use ibelick bg for readymade background colors
-// use loard icon for icons
+
+
 
 function App() {
   const [count, setCount] = useState(0)
